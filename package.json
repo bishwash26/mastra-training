@@ -1,0 +1,64 @@
+{
+  "name": "mastra-training",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "A collection of Mastra agents for weather, dining, and travel assistance",
+  "keywords": [
+    "mastra",
+    "ai",
+    "agents",
+    "weather",
+    "restaurant",
+    "travel",
+    "assistant"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "exports": {
+    ".": "./src/mastra/index.ts",
+    "./agents": "./src/mastra/exports.ts",
+    "./weather": "./src/mastra/agents/weather-agent.ts",
+    "./restaurant": "./src/mastra/agents/restaurant-agent.ts",
+    "./travel": "./src/mastra/agents/travel-agent.ts",
+    "./tools": "./src/mastra/tools/weather-tool.ts",
+    "./workflows": "./src/mastra/workflows/weather-workflow.ts"
+  },
+  "files": [
+    "src/mastra/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start",
+    "export:agents": "tsc --outDir dist && cp -r src/mastra dist/",
+    "package:agents": "npm run export:agents && tar -czf mastra-agents.tar.gz dist/"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.23",
+    "@mastra/core": "^0.10.15",
+    "@mastra/libsql": "^0.11.0",
+    "@mastra/loggers": "^0.10.3",
+    "@mastra/memory": "^0.11.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "mastra": "^0.10.13",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mastra-training.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mastra-training/issues"
+  },
+  "homepage": "https://github.com/yourusername/mastra-training#readme"
+}
