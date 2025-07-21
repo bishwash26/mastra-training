@@ -7,6 +7,11 @@ A collection of specialized Mastra agents for weather, dining, and travel assist
 
 ## 🚀 Quick Start
 
+Add .env file with following keys:
+```bash
+OPENAI_API_KEY=<your-api-key>
+```
+
 ```bash
 npm install
 npm run dev
