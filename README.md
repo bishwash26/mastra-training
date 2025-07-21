@@ -1,5 +1,8 @@
 # Mastra Training - Agent Collection
 
+This changes were made following this course: 
+https://mastra.ai/course
+
 A collection of specialized Mastra agents for weather, dining, and travel assistance.
 
 ## 🚀 Quick Start
@@ -13,6 +16,13 @@ npm run dev
 
 ### 🌤️ Weather Agent
 **Purpose**: Provides weather information and activity suggestions
+
+###  Resturant Agenda
+**Purpose**: Provides Resturant Infomration according to weather
+
+## Travel Agent
+**Purpose**: Provides travel guide to the user according to weather 
+
 
 **Capabilities**:
 - Get current weather for any location
